@@ -33,5 +33,7 @@ library(factoextra)
 datosPCA <- prcomp(datos_estandarizados)
 summary(datosPCA)
 
+fviz_screeplot(datosPCA , addlabels = TRUE, ylim = c(0, 20))
+
 ```
 
