@@ -120,3 +120,45 @@ df_componentes <- data.frame(Componente = paste0("Componente ", 1:length(prop_va
 print(df_componentes)
 
 ```
+
+
+
+# Crear una tabla descriptiva con las variables más importantes
+
+```{r }
+
+# Extraer los cargos de las variables en los componentes principales
+cargos <- pca.results$rotation
+
+# Crear una tabla con los cargos de las variables en los componentes principales
+tabla_pca <- as.data.frame(cargos)
+
+# Supongamos que ya tienes la tabla 'tabla_pca' con los cargos de las variables en los componentes principales
+
+# Calcular terciles para cada componente principal
+terciles_componentes <- lapply(tabla_pca, function(x) quantile(x, probs = seq(0, 1, by = 1/3)))
+
+# Crear vectores de límites de terciles para cada componente principal
+tercil_limits_componentes <- lapply(terciles_componentes, function(x) c(min(x), x[2], x[3], max(x)))
+
+# Crear nuevas columnas para cada tercil bajo cada componente principal
+for (i in 1:ncol(tabla_pca)) {
+  for (j in 1:3) {
+    tercil_columna <- cut(tabla_pca[[i]], breaks = tercil_limits_componentes[[i]], labels = c("Tercil 1", "Tercil 2", "Tercil 3"), include.lowest = TRUE)
+    nombre_columna <- paste("Tercil", j, "_", names(tabla_pca)[i], sep = "")
+    tabla_pca[nombre_columna] <- ifelse(tercil_columna == levels(tercil_columna)[j], 1, 0)
+  }
+}
+
+# Visualizar la tabla actualizada
+print(tabla_pca)
+
+```
+
+
+# Método de regresión logística
+
+```{r }
+
+
+```
