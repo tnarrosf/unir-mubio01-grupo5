@@ -109,7 +109,14 @@ fviz_contrib(pca.results, choice = "var", axes = 1, top = 10)
 ```
 ```{r}
 
+# Proporción de varianza explicada por cada componente principal
+prop_var_explicada <- (pca.results$sdev^2) / sum(pca.results$sdev^2)
 
+# Crear un dataframe con los componentes y su proporción de varianza explicada
+df_componentes <- data.frame(Componente = paste0("Componente ", 1:length(prop_var_explicada)),
+                              R2 = prop_var_explicada)
 
+# Imprimir el dataframe con el formato deseado
+print(df_componentes)
 
 ```
