@@ -1,0 +1,115 @@
+---
+title: "Actividad 3 Estadistica y R"
+author: "David"
+date: "2024-02-07"
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load-packages, include=FALSE}
+
+library(tidyverse)
+library(dplyr)
+library(stats)
+library(FactoMineR)
+library(factoextra)
+library(kableExtra)
+library(ggplot2)
+library(knitr)
+library(rmarkdown)
+library(rstatix)
+library(tidyr)
+library(nortest)
+
+```
+
+# Carga y exploración de los datos
+
+```{r }
+
+# Carga de los datos y exploración
+
+datos <- read_csv("F:\\Descargas\\mubio02_act3_alimentos_nutrientes_4900.csv")
+
+#str(datos)
+
+
+
+# Comprobamos la presencia de valores nulos o missing y corregimos los datos
+
+apply(datos, 2, sd) # Verificamos columnas con valores constantes
+
+datos_sin_nulos <- datos[, colSums(is.na(datos)) == 0] # Eliminamos columnas con valores nulos
+
+datos_sin_nulos_bien <- datos_sin_nulos[, apply(datos_sin_nulos, 2, sd) != 0] # Eliminamos columnas con desviación estandar cero
+
+
+
+
+```
+
+# Comprobar la normalidad de los datos y estandarización de los mismos
+
+```{r }
+
+# Aplicar la prueba de Anderson-Darling a cada variable seleccionada
+# y comprobar la normalidad
+resultados_normalidad <- datos_sin_nulos_bien %>%
+  gather(key = "variable", value = "valor", ) %>%
+  group_by(variable) %>%
+  summarise(
+    Test_utilizado = "Anderson-Darling",
+    Valor_p = ad.test(valor)$p.value
+  ) %>%
+  mutate(
+    Interpretación = if_else(Valor_p > 0.05, "Distribución Normal", "No Normal")
+  )
+
+# Crear la Tabla modelo 1 con los resultados de la prueba de Anderson-Darling
+kable(resultados_normalidad, col.names = c("Variable", "Test utilizado", "Valor p", "Interpretación"), caption = "Tabla 1. Prueba de normalidad de Anderson-Darling para los alimentos y nutrientes")
+
+
+# Estandarización de los datos
+
+scaled_data <- scale(datos_sin_nulos_bien)
+head(scaled_data)
+
+
+```
+
+# Elaboración del PCA y representaciones gráficas
+
+```{r }
+
+# Aplicamos el PCA
+
+pca.results <- prcomp(scaled_data)
+summary(pca.results)
+
+
+# Visualización
+
+fviz_pca_ind(pca.results, geom.ind = "point", 
+             col.ind = "#FC4E07", 
+             axes = c(1, 2), 
+             pointsize = 1.5) 
+
+# Scree plot de los PCs
+
+fviz_screeplot(pca.results, addlabels = TRUE, ylim = c(0, 15))
+
+# Scree plot de las variables
+
+fviz_contrib(pca.results, choice = "var", axes = 1, top = 10)
+
+
+```
+```{r}
+
+
+
+
+```
