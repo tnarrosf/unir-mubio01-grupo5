@@ -7568,9 +7568,9 @@ a.anchor-link {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="750975df-72fb-4af7-b33f-2965d3a59586" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="2abd3f9a-5106-4fa9-8edb-58c28e27a69a" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('750975df-72fb-4af7-b33f-2965d3a59586');
+var element = document.getElementById('2abd3f9a-5106-4fa9-8edb-58c28e27a69a');
 (function(root) {
   function now() {
     return new Date();
@@ -7854,9 +7854,9 @@ function(Bokeh) {} // ensure no trailing comma for IE
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="3e4998cc-c488-4427-8cdb-71725f5deeda" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="3c5e713d-416e-4446-85c0-523c0146a5a1" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('3e4998cc-c488-4427-8cdb-71725f5deeda');
+var element = document.getElementById('3c5e713d-416e-4446-85c0-523c0146a5a1');
 
 if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
   window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
@@ -10179,85 +10179,116 @@ Puntuación F1: 0.9297839850038611
 Al trabajar con valores de expresión génica los cuales poseen una extructura compleja y no lineal el metodo KNN nos permite capturar relaciones no lineales al no hacer suposiciones sobre la forma de los datos. Tambien, En el contexto de la expresión génica, las muestras vecinas pueden tener perfiles de expresión génica similares debido a similitudes biológicas. KNN puede aprovechar estas similitudes para imputar valores faltantes.</p>
 <p><strong>¿Habéis llevado a cabo algún otro tipo de procesamiento? Razonad vuestra respuesta</strong></p>
 <p>Para la realización de los analisis posteriores hemos tenido que convertir todos los valores de expresion de variable objeto a string, dado que la puntualización que los separaba producia que el progrma los leyera como variable objeto impidiendo así llevar a cabo los analisis.</p>
-<h3 id="2.-M%C3%A9todos-supervisados">2. Métodos supervisados<a class="anchor-link" href="#2.-M%C3%A9todos-supervisados">¶</a></h3><p><strong>¿Cuál es el motivo por el cual habéis seleccionado estas técnicas de reducción de dimensionalidad?</strong></p> Ya que PCA es útil para eliminar la redundancia y capturar la estructura subyacente de los datos, lo que puede ayudar a simplificar los cálculos y reducir el ruido en los datos. Y por otra parte Isomap es de gran utilidad cuando los datos exhiben estructuras intrínsecas de baja dimensión que no se pueden capturar de manera efectiva con técnicas lineales como PCA
-Ya que PCA es útil para eliminar la redundancia y capturar la estructura subyacente de los datos, lo que puede ayudar a simplificar los cálculos y reducir el ruido en los datos. Y por otra parte Isomap es de gran utilidad cuando los datos exhiben estructuras intrínsecas de baja dimensión que no se pueden capturar de manera efectiva con técnicas lineales como PCA</p>
-<p><strong>¿Cuál es el motivo por el cual habéis seleccionado estas técnicas de clusterización?</strong>
-K-means se seleccionó por su eficiencia computacional, facilidad de interpretación e implementación, así como su flexibilidad para manejar diversos tamaños y formas de clústeres. Por otro lado, el clustering jerárquico aglomerativo fue elegido por su capacidad de proporcionar una estructura jerárquica que facilita la comprensión de relaciones entre grupos y subgrupos.</p>
+<h3 id="2.-M%C3%A9todos-supervisados">2. Métodos supervisados<a class="anchor-link" href="#2.-M%C3%A9todos-supervisados">¶</a></h3><p><strong>¿Cuál es el motivo por el cual habéis seleccionado estas técnicas de reducción de dimensionalidad?</strong></p>
+<p>Ya que PCA es útil para eliminar la redundancia y capturar la estructura subyacente de los datos, lo que puede ayudar a simplificar los cálculos y reducir el ruido en los datos. Y por otra parte Isomap es de gran utilidad cuando los datos exhiben estructuras intrínsecas de baja dimensión que no se pueden capturar de manera efectiva con técnicas lineales como PCA</p>
+<p><strong>¿Cuál es el motivo por el cual habéis seleccionado estas técnicas de clusterización?</strong></p>
+<p>K-means se seleccionó por su eficiencia computacional, facilidad de interpretación e implementación, así como su flexibilidad para manejar diversos tamaños y formas de clústeres. Por otro lado, el clustering jerárquico aglomerativo fue elegido por su capacidad de proporcionar una estructura jerárquica que facilita la comprensión de relaciones entre grupos y subgrupos.</p>
 <p><strong>En ambos casos, ¿qué aspectos positivos y negativo tienen cada una?</strong></p>
-<p><strong>Análisis de Componentes Principales (PCA)</strong>:
-las ventajas que puede tener este tipo de análisis frente a otros similares pueden ser:
-1.-Eficiencia Computacional: es computacionalmente eficiente y es capaz de manejar grandes conjuntos de datos.
-2.-Fácil Implementación: PCA es relativamente fácil de entender e implementar.
-3.-Preservación de Varianza: PCA se centra en preservar la varianza de los datos, lo que puede ser beneficioso en ciertos casos.
-Por otro lado, las desventajas que acompañan a este tipo de análisis pueden ser:
-1.-Linealidad: la PCA asume linealidad en los datos, lo que puede ser una limitación si los datos tienen estructuras no lineales complejas.
-2.-Sensibilidad a Outliers: la PCA puede ser sensible a los outliers, ya que busca maximizar la varianza y los outliers pueden influir significativamente en la varianza.
-3.-Interpretación: las componentes principales pueden ser difíciles de interpretar y pueden carecer de significado en términos de las características originales.</p>
-<p><strong>Mapeo Isométrico (Isomap)</strong>:
-Ventajas:
-1.-Preservación de Distancias Geodésicas: Isomap preserva las distancias geodésicas (distancias a lo largo de las trayectorias más cortas en el espacio subyacente), lo que lo hace más adecuado para datos con estructuras no lineales.
-2.-Manejo de Datos No Lineales: Isomap puede capturar estructuras no lineales complejas en los datos.
-3.-Robustez ante Outliers: Isomap puede ser más robusto ante outliers que PCA, ya que se basa en relaciones de vecindario y no solo en la varianza.
-Desventajas:
-1.-Computacionalmente Costoso: Isomap puede ser computacionalmente costoso, especialmente para grandes conjuntos de datos, ya que implica el cálculo de distancias geodésicas.
-2.-Parámetros Sensibles: Isomap puede ser sensible a la elección de parámetros, como el número de vecinos, y una elección inapropiada puede afectar los resultados.
-3.-Interpretación: Al igual que PCA, las dimensiones resultantes pueden ser difíciles de interpretar directamente.</p>
-<p><strong>K-Means</strong>:
-Ventajas:
-1.-Escalabilidad: Funciona bien en conjuntos de datos grandes y con un número moderado de dimensiones.
-2.-Convergencia Rápida: Converge rápidamente, especialmente en conjuntos de datos con estructuras esféricas.
-3.-Fácil Implementación: Es fácil de entender e implementar.
-Desventajas:
-1.-Sesibilidad a Centroides Iniciales: La elección inicial de centroides puede afectar los resultados finales y, en algunos casos, puede conducir a soluciones subóptimas.
-2.-Dependencia de la Forma de los Clusters: K-Means asume que los clusters son esféricos y de tamaño similar, lo que puede ser una limitación en datos con formas y tamaños de clusters irregulares.
-3.-Número de Clusters Predefinido: Requiere especificar previamente el número de clusters, lo cual puede no ser conocido de antemano.</p>
-<p><strong>Clustering Jerárquico Aglomerativo</strong>:
-Ventajas:
-1.-No se Necesita Especificar el Número de Clusters: No es necesario especificar el número de clusters de antemano. El dendrograma proporciona una representación visual que puede ayudar a elegir el número óptimo de clusters.
-2.-Interpretación Jerárquica: Proporciona una visión jerárquica de la estructura de clusters, lo que puede ser útil para la interpretación.
-3.-Robustez ante Formas Irregulares: Puede manejar clusters con formas y tamaños irregulares, ya que no hace suposiciones sobre la forma de los clusters.
-Desventajas:
-1.-Complejidad Computacional: Puede ser computacionalmente costoso, especialmente en grandes conjuntos de datos, ya que la complejidad es cuadrática respecto al número de observaciones.
-2.-Sensibilidad a la Métrica y al Método de Vinculación: Los resultados pueden variar según la métrica de distancia y el método de vinculación utilizados.
-3.-Inflexibilidad una Vez que se Realiza el Clustering: Una vez que se realiza el clustering, no se puede deshacer la decisión de fusionar clusters.</p>
-<p><strong>En el caso de la clusterización, ¿podéis afirmar con certeza que los clústeres generados son los mejores posibles? Razonad vuestra respuesta</strong>
-eNo se puede afirmar con certeza que los clústeres generados por un algoritmo de clusterización son los "mejores posibles". La evaluación de la calidad de los clústeres es un desafío, y la "mejor" solución puede depender de muchos factores, incluidos los objetivos específicos del análisis y la naturaleza de los datos. Diferentes algoritmos de clusterización pueden producir resultados diferentes para el mismo conju.</p>
-<h3 id="3.-M%C3%A9todos-supervisados">3. Métodos supervisados<a class="anchor-link" href="#3.-M%C3%A9todos-supervisados">¶</a></h3><p><strong>¿Cuál es el motivo por el cual habéis seleccionado ambas técnicas de aprendizaje supervisado? ¿Cuál ha dado mejores resultados a la hora de clasificar las muestras? Razonad vuestras respuestas</strong>
-Las SVM son eficaces para clasificar datos en espacios de alta dimensión y pueden manejar conjuntos de datos no lineales mediante el uso de funciones de kernel. 
-Los árboles de decisión son intuitivos y fáciles de interpretar, lo que los hace ideales para la comprensión de la lógica de toma de decisiones. Además, pueden manejar datos categóricos y numéricos, así como detectar interacciones entre variables. 
+<p><strong>Análisis de Componentes Principales (PCA)</strong>:</p>
+<p>Las ventajas que puede tener este tipo de análisis frente a otros similares pueden ser:</p>
+<ol>
+<li>Eficiencia Computacional: es computacionalmente eficiente y es capaz de manejar grandes conjuntos de datos.</li>
+<li>Fácil Implementación: PCA es relativamente fácil de entender e implementar.</li>
+<li>Preservación de Varianza: PCA se centra en preservar la varianza de los datos, lo que puede ser beneficioso en ciertos casos.</li>
+</ol>
+<p>Por otro lado, las desventajas que acompañan a este tipo de análisis pueden ser:</p>
+<ol>
+<li>Linealidad: la PCA asume linealidad en los datos, lo que puede ser una limitación si los datos tienen estructuras no lineales complejas.</li>
+<li>Sensibilidad a Outliers: la PCA puede ser sensible a los outliers, ya que busca maximizar la varianza y los outliers pueden influir significativamente en la varianza.</li>
+<li>Interpretación: las componentes principales pueden ser difíciles de interpretar y pueden carecer de significado en términos de las características originales.</li>
+</ol>
+<p><strong>Mapeo Isométrico (Isomap)</strong>:</p>
+<p>Ventajas:</p>
+<ol>
+<li>Preservación de Distancias Geodésicas: Isomap preserva las distancias geodésicas (distancias a lo largo de las trayectorias más cortas en el espacio subyacente), lo que lo hace más adecuado para datos con estructuras no lineales.</li>
+<li>Manejo de Datos No Lineales: Isomap puede capturar estructuras no lineales complejas en los datos.</li>
+<li>Robustez ante Outliers: Isomap puede ser más robusto ante outliers que PCA, ya que se basa en relaciones de vecindario y no solo en la varianza.</li>
+</ol>
+<p>Desventajas:</p>
+<ol>
+<li>Computacionalmente Costoso: Isomap puede ser computacionalmente costoso, especialmente para grandes conjuntos de datos, ya que implica el cálculo de distancias geodésicas.</li>
+<li>Parámetros Sensibles: Isomap puede ser sensible a la elección de parámetros, como el número de vecinos, y una elección inapropiada puede afectar los resultados.</li>
+<li>Interpretación: Al igual que PCA, las dimensiones resultantes pueden ser difíciles de interpretar directamente.</li>
+</ol>
+<p><strong>K-Means</strong>:</p>
+<p>Ventajas:</p>
+<ol>
+<li>Escalabilidad: Funciona bien en conjuntos de datos grandes y con un número moderado de dimensiones.</li>
+<li>Convergencia Rápida: Converge rápidamente, especialmente en conjuntos de datos con estructuras esféricas.</li>
+<li>Fácil Implementación: Es fácil de entender e implementar.</li>
+</ol>
+<p>Desventajas:</p>
+<ol>
+<li>Sesibilidad a Centroides Iniciales: La elección inicial de centroides puede afectar los resultados finales y, en algunos casos, puede conducir a soluciones subóptimas.</li>
+<li>Dependencia de la Forma de los Clusters: K-Means asume que los clusters son esféricos y de tamaño similar, lo que puede ser una limitación en datos con formas y tamaños de clusters irregulares.</li>
+<li>Número de Clusters Predefinido: Requiere especificar previamente el número de clusters, lo cual puede no ser conocido de antemano.</li>
+</ol>
+<p><strong>Clustering Jerárquico Aglomerativo</strong>:</p>
+<p>Ventajas:</p>
+<ol>
+<li>No se Necesita Especificar el Número de Clusters: No es necesario especificar el número de clusters de antemano. El dendrograma proporciona una representación visual que puede ayudar a elegir el número óptimo de clusters.</li>
+<li>Interpretación Jerárquica: Proporciona una visión jerárquica de la estructura de clusters, lo que puede ser útil para la interpretación.</li>
+<li>Robustez ante Formas Irregulares: Puede manejar clusters con formas y tamaños irregulares, ya que no hace suposiciones sobre la forma de los clusters.</li>
+</ol>
+<p>Desventajas:</p>
+<ol>
+<li>Complejidad Computacional: Puede ser computacionalmente costoso, especialmente en grandes conjuntos de datos, ya que la complejidad es cuadrática respecto al número de observaciones.</li>
+<li>Sensibilidad a la Métrica y al Método de Vinculación: Los resultados pueden variar según la métrica de distancia y el método de vinculación utilizados.</li>
+<li>Inflexibilidad una Vez que se Realiza el Clustering: Una vez que se realiza el clustering, no se puede deshacer la decisión de fusionar clusters.</li>
+</ol>
+<p><strong>En el caso de la clusterización, ¿podéis afirmar con certeza que los clústeres generados son los mejores posibles? Razonad vuestra respuesta</strong></p>
+<p>No se puede afirmar con certeza que los clústeres generados por un algoritmo de clusterización son los "mejores posibles". La evaluación de la calidad de los clústeres es un desafío, y la "mejor" solución puede depender de muchos factores, incluidos los objetivos específicos del análisis y la naturaleza de los datos. Diferentes algoritmos de clusterización pueden producir resultados diferentes para el mismo conju.</p>
+<h3 id="3.-M%C3%A9todos-supervisados">3. Métodos supervisados<a class="anchor-link" href="#3.-M%C3%A9todos-supervisados">¶</a></h3><p><strong>¿Cuál es el motivo por el cual habéis seleccionado ambas técnicas de aprendizaje supervisado? ¿Cuál ha dado mejores resultados a la hora de clasificar las muestras? Razonad vuestras respuestas</strong></p>
+<p>Las SVM son eficaces para clasificar datos en espacios de alta dimensión y pueden manejar conjuntos de datos no lineales mediante el uso de funciones de kernel.
+Los árboles de decisión son intuitivos y fáciles de interpretar, lo que los hace ideales para la comprensión de la lógica de toma de decisiones. Además, pueden manejar datos categóricos y numéricos, así como detectar interacciones entre variables.
 Por otro lado, la regresión logística es útil para modelar la relación entre variables predictoras y una variable objetivo binaria, proporcionando probabilidades de pertenencia a una clase.</p>
 <p><strong>¿Habéis considerado oportuno implementar algún método de reducción de dimensionalidad para procesar los datos antes de implementarlos en dichas técnicas?</strong></p>
 <p><strong>¿Qué aspectos positivos y negativos tienen cada una de las técnicas que habéis elegido?</strong></p>
-<p><strong>Regresión Logística</strong>
-Ventajas:
-1.-Interpretabilidad: La regresión logística produce coeficientes que pueden interpretarse directamente en términos de probabilidad logarítmica de pertenecer a una clase.
-2.-Eficiencia Computacional: Es computacionalmente eficiente y puede manejar grandes conjuntos de datos.
-3.-Manejo de Clasificación Binaria: Es especialmente efectiva en problemas de clasificación binaria.
-Desventajas:
-1.-Limitada para Problemas No Lineales: Puede no funcionar bien en problemas altamente no lineales donde las fronteras de decisión son complejas.</p>
-<p><strong>Máquinas de Soporte Vectorial (SVM)</strong>:
-Ventajas:
-1.-Efectividad en Espacios de Alta Dimensión: SVM puede ser efectivo en espacios de alta dimensión, como en la clasificación de texto o imágenes.
-2.-Manejo de Problemas No Lineales: Puede manejar eficientemente problemas no lineales utilizando kernels.
-3.-Control sobre la Regularización: SVM proporciona un parámetro de regularización que permite controlar la complejidad del modelo.
-Desventajas:
-1.-Sensibilidad a la Elección del Kernel: Los resultados pueden depender de la elección adecuada del kernel y sus parámetros asociados.
-2.-Requiere Ajuste de Hiperparámetros: Requiere ajuste cuidadoso de hiperparámetros para obtener un rendimiento óptimo.</p>
-<p><strong>Árboles de Decisión</strong>:
-Ventajas:
-1.-Interpretabilidad: Los árboles de decisión son fáciles de entender e interpretar, ya que se pueden visualizar gráficamente.
-2.-Manejo de Datos Mixtos: Pueden manejar datos mixtos (categóricos y numéricos) sin necesidad de preprocesamiento extenso.
-3.-No Requiere Escalado de Características: No requieren que las características se escalen antes de ajustar el modelo.
-Desventajas:
-1.-Inestabilidad: Los árboles pueden ser inestables y sensibles a pequeñas variaciones en los datos de entrenamiento.
-2.-Tendencia al Sobreajuste: Tienen una tendencia al sobreajuste, especialmente en conjuntos de datos pequeños o ruidosos.
-3.-Modelos No Lineales Limitados: Pueden no funcionar tan bien en problemas altamente no lineales en comparación con métodos más complejos como con kernels.</p>
-<h3 id="4.-Deep-learning">4. Deep learning<a class="anchor-link" href="#4.-Deep-learning">¶</a></h3><p><strong>De estas cuatro opciones, ¿qué tipo de arquitectura de deep learning sería la más adecuada para procesar datos de expresión génica? Razonad vuestra respuesta.</strong>
-a) Red de perceptrones (multiperceptron layers).
-b) Redes convolucionales.
-c) Redes recurrentes
-d) Redes de grafos</p>
-<p>La elección de la arquitectura de deep learning para procesar datos de expresión génica depende de la naturaleza de los datos y de los objetivos específicos del análisis.</p>
+<p><strong>Regresión Logística</strong></p>
+<p>Ventajas:</p>
+<ol>
+<li>Interpretabilidad: La regresión logística produce coeficientes que pueden interpretarse directamente en términos de probabilidad logarítmica de pertenecer a una clase.</li>
+<li>Eficiencia Computacional: Es computacionalmente eficiente y puede manejar grandes conjuntos de datos.</li>
+<li>Manejo de Clasificación Binaria: Es especialmente efectiva en problemas de clasificación binaria.</li>
+</ol>
+<p>Desventajas:</p>
+<ol>
+<li>Limitada para Problemas No Lineales: Puede no funcionar bien en problemas altamente no lineales donde las fronteras de decisión son complejas.</li>
+</ol>
+<p><strong>Máquinas de Soporte Vectorial (SVM)</strong>:</p>
+<p>Ventajas:</p>
+<ol>
+<li>Efectividad en Espacios de Alta Dimensión: SVM puede ser efectivo en espacios de alta dimensión, como en la clasificación de texto o imágenes.</li>
+<li>Manejo de Problemas No Lineales: Puede manejar eficientemente problemas no lineales utilizando kernels.</li>
+<li>Control sobre la Regularización: SVM proporciona un parámetro de regularización que permite controlar la complejidad del modelo.</li>
+</ol>
+<p>Desventajas:</p>
+<ol>
+<li>Sensibilidad a la Elección del Kernel: Los resultados pueden depender de la elección adecuada del kernel y sus parámetros asociados.</li>
+<li>Requiere Ajuste de Hiperparámetros: Requiere ajuste cuidadoso de hiperparámetros para obtener un rendimiento óptimo.</li>
+</ol>
+<p><strong>Árboles de Decisión</strong>:</p>
+<p>Ventajas:</p>
+<ol>
+<li>Interpretabilidad: Los árboles de decisión son fáciles de entender e interpretar, ya que se pueden visualizar gráficamente.</li>
+<li>Manejo de Datos Mixtos: Pueden manejar datos mixtos (categóricos y numéricos) sin necesidad de preprocesamiento extenso.</li>
+<li>No Requiere Escalado de Características: No requieren que las características se escalen antes de ajustar el modelo.</li>
+</ol>
+<p>Desventajas:</p>
+<ol>
+<li>Inestabilidad: Los árboles pueden ser inestables y sensibles a pequeñas variaciones en los datos de entrenamiento.</li>
+<li>Tendencia al Sobreajuste: Tienen una tendencia al sobreajuste, especialmente en conjuntos de datos pequeños o ruidosos.</li>
+<li>Modelos No Lineales Limitados: Pueden no funcionar tan bien en problemas altamente no lineales en comparación con métodos más complejos como con kernels.</li>
+</ol>
+<h3 id="4.-Deep-learning">4. Deep learning<a class="anchor-link" href="#4.-Deep-learning">¶</a></h3><p><strong>De estas cuatro opciones, ¿qué tipo de arquitectura de deep learning sería la más adecuada para procesar datos de expresión génica? Razonad vuestra respuesta.</strong></p>
+<ol type="a">
+<li>Red de perceptrones (multiperceptron layers).</li>
+<li>Redes convolucionales.</li>
+<li>Redes recurrentes</li>
+<li>Redes de grafos</li>
+</ol>
+La elección de la arquitectura de deep learning para procesar datos de expresión génica depende de la naturaleza de los datos y de los objetivos específicos del análisis. 
+
 <p>Cualquiera de las opciones podria ser valida depediendo de las circunstancias. Por ejemplo: redes recurrentes si se hace un análisis de diferencia temporal de expresión, redes de grafos en caso de análisis de expresion de generes relacionados (retroalimentación, activación dependiente... ), las redes de perceptrones si no hay una correlación secuencial o temporal...</p>
 </div>
 </div>
