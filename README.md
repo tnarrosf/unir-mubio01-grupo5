@@ -8,8 +8,8 @@ Este repositorio contiene apuntes detallados sobre las distintas actividades gru
 
 ## Contenido
 
-- Algoritmos
-- Estadistica
+- Algoritmos -> Realizado por los participantes Tomás Narros Fernández, David Fernández Martín y Juan Antonio Hidalgo Pérez
+- Estadistica -> Realizado por los participantes Tomás Narros Fernández, David Fernández Martín, Juan Antonio Hidalgo Pérez y Mar Rio Mangues
 - License
 - README.md
 
