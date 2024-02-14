@@ -2,16 +2,18 @@
 
 Investigar el mecanismo de acción de la desmetilación del DNA tras una caracterización estructural de la proteína TET2
 
+
 - Describir el estado del arte del tema (una introducción). 
 
 
+La desmetilación del ADN es un proceso epigenético esencial, ya que puede dar lugar a cambios en la expresión genética, teniendo impacto en procesos tales como la diferenciación celular, proliferación celular, impronta genómica y reparación del ADN entre otros.
+La proteína TET2 es una dioxigenasa de 5-metilcitosina (5mC) que cataliza la conversión de 5mC a 5-hidroximetilcitosina (5hmC), dando lugar a una cascada de reacciones que culminan en la desmetilación del ADN, a través de dos maneras, una desmetilación activa y pasiva.
 
 
 - Plantear una hipótesis que pueda ser respondida usando herramientas ómicas. Puede utilizarse solo una o combinarse.
 
 
 La estructura tridimensional de TET2 determina su actividad catalítica y especificidad hacia diferentes regiones del ADN metilado
-
 
 
 - Definir los objetivos.
@@ -33,11 +35,14 @@ Medición de actividad enzimática
 
 
 
+
+
 - Bibliografía
 
 https://www.ncbi.nlm.nih.gov/gene/54790#genomic-context
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235521/
 https://www.cell.com/cell/fulltext/S0092-8674(13)01469-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867413014694%3Fshowall%3Dtrue#secsectitle0090
-
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3263819/
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2715015/
 
 
