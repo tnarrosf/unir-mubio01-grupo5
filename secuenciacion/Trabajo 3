@@ -28,7 +28,13 @@ Evaluar el impacto de las mutaciones en TET2 sobre su estructura y función.
 Extracción y purificación de TET2 (se producen cristales)
 Cristalografía de rayos X
 Medición de actividad enzimática 
+
 ¿?¿Análisis bioinformático¿?¿
+Predicción estructura 2ª y 3ª -> PsiPred e I-TASSER
+Modelado homólogo -> SWISS-MODEL y Phyre2
+Refinamiento de estructura -> GROMACS
+Análisi estructura -> PyMOL y ChimeraX
+Simulaciones de dinámica molecular -> NAMD
 
 
 - Describir los resultados y conclusiones esperadas.
