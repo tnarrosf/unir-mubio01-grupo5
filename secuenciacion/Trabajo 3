@@ -7,7 +7,11 @@ Investigar el mecanismo de acción de la desmetilación del DNA tras una caracte
 
 
 La desmetilación del ADN es un proceso epigenético esencial, ya que puede dar lugar a cambios en la expresión genética, teniendo impacto en procesos tales como la diferenciación celular, proliferación celular, impronta genómica y reparación del ADN entre otros.
-La proteína TET2 es una dioxigenasa de 5-metilcitosina (5mC) que cataliza la conversión de 5mC a 5-hidroximetilcitosina (5hmC), dando lugar a una cascada de reacciones que culminan en la desmetilación del ADN, a través de dos maneras, una desmetilación activa y pasiva.
+La proteína TET2 es una dioxigenasa de 5-metilcitosina (5mC) que cataliza la conversión de 5mC a 5-hidroximetilcitosina (5hmC), dando lugar a una cascada de reacciones que culminan en la desmetilación del ADN, a través de dos maneras, una desmetilación activa y pasiva. (40)
+
+Esta enzima tiene un papel importante en numerosos procesos biológicos, especialmente relacionados con mecanismos de diferenciación celular, desarrollo embrionario y homeostasis de tejidos (41). Durante los ultimos años el interes en esta proteína ha ido en aumento, y se ha identificado un rol central en la hematopoiesis(42) y en procesos de respuesta inmune mediada por celulas T (43).
+Mutaciones que afectan a su funciona se han relacionado con el desarrollo de distintas enfermedades tales como leucemia (44), linfomas (45), lo que la convierte en un potencial diana para tratamientos terapéuticos.
+
 
 
 - Plantear una hipótesis que pueda ser respondida usando herramientas ómicas. Puede utilizarse solo una o combinarse.
@@ -57,4 +61,11 @@ https://www.cell.com/cell/fulltext/S0092-8674(13)01469-4?_returnURL=https%3A%2F%
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3263819/
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2715015/
 
+
+40 - TET enzymes, TDG and the dynamics of DNA demethylation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4046508/
+41 - The Complexity of TET2 Functions in Pluripotency and Development - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7848104/
+42 - TET2: A cornerstone in normal and malignant hematopoiesis - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7780023/
+43 - TET proteins regulate T cell and iNKT cell lineage specification in a TET2 catalytic dependent manner - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9389146/
+44 - TET2-mediated mRNA demethylation regulates leukemia stem cell homing and self-renewal - https://pubmed.ncbi.nlm.nih.gov/37541212/
+45 - Clonal germinal center B cells function as a niche for T-cell lymphoma - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10653021/
 
