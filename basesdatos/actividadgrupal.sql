@@ -1,9 +1,11 @@
 
 # Tabla anotación
-
+# Tipos admitidos: Estructurales, Funcionales, de Expresión Génica, de Variación Genética, 
+#                  de Regulación Génica, de Conservación Evolutiva, Clínicas, de Interacciones Proteína-Gen, 
+#                  de Localización Subcelular 
 CREATE TABLE `anotacion` (
   `identificador` int NOT NULL,
-  `tipoanotacion` varchar(200) NOT NULL,
+  `tipoanotacion` ENUM('funcional', 'estructural', 'expresion', 'variacion', 'regulacion', 'conservacion', 'clinica', 'interaccion', 'localizacion') NOT NULL,
   `descripcion` varchar(200) NOT NULL,
   PRIMARY KEY (`identificador`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
@@ -31,7 +33,7 @@ CREATE TABLE `estudio` (
 # Tabla gen
 
 CREATE TABLE `gen` (
-  `nombre` int NOT NULL,
+  `nombre` varchar(20) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
   `cromosoma-gen` varchar(200) NOT NULL,
   `estudio-gen` varchar(200) NOT NULL,
@@ -41,10 +43,15 @@ CREATE TABLE `gen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
 # Tabla secuencia
-
+# Tipos de secuencia admitidos:
+# Secuencias codificantes - exones
+# Secuencias no codificantes - intrones, ARNm, miARN, snARN, snoARN, tARN, rARN
+# Elementos reguladores - Promotores, Terminadores, Enhancers, Silencers
+#
+Secuencias no codificantes
 CREATE TABLE `secuencia` (
   `identificador` int NOT NULL,
-  `tiposecuencia` varchar(200) DEFAULT NULL,
+  `tiposecuencia` ENUM('exon', 'intron', 'ARNm', 'miARN', 'snARN', 'snoARN', 'tARN', 'rARN', 'promotor', 'terminador', 'enhancer', 'silencer') DEFAULT NULL,
   `direccion` enum('+','-') NOT NULL,
   PRIMARY KEY (`identificador`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
