@@ -170,9 +170,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `actividadgrupal_new`.`tìpo_variante`
+-- Table `actividadgrupal_new`.`tipo_variante`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `actividadgrupal_new`.`tìpo_variante` (
+CREATE TABLE IF NOT EXISTS `actividadgrupal_new`.`tipo_variante` (
   `identificador` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`identificador`))
@@ -185,7 +185,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `actividadgrupal_new`.`variante` (
   `identificador` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `tìpo_variante_identificador` INT NOT NULL,
+  `tipo_variante_identificador` INT NOT NULL,
   `posicion` INT NOT NULL,
   `alelo_identificador` INT NULL,
   `secuencia_identificador` INT NOT NULL,
