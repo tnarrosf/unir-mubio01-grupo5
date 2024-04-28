@@ -35,7 +35,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- Table `actividadgrupal_new`.`tipo_anotacion`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `actividadgrupal_new`.`tipo_anotacion` (
-  `identificador` INT NOT NULL,
+  `identificador` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`identificador`))
 ENGINE = InnoDB;

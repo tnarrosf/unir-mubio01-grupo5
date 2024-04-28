@@ -1,4 +1,20 @@
-INSERT INTO `actividadgrupal_new`.`tipo_secuencia` (`descripcion`)
+-- -----------------------------------------------------
+-- Carga de tablas de tipologías
+-- -----------------------------------------------------
+
+INSERT INTO `actividadgrupal_new`.`tipo_anotacion` (`nombre`)
+VALUES
+('Funciónal'),
+('Estructural'),
+('De expresion'),
+('De variación'),
+('De regulación'),
+('De conservación'),
+('Clínica'),
+('De interacción'),
+('De localización');
+
+INSERT INTO `actividadgrupal_new`.`tipo_secuencia` (`nombre`)
 VALUES
 ('Exón'),
 ('Intrón'),
@@ -13,18 +29,11 @@ VALUES
 ('Enhancer'),
 ('Silencer');
 
-
-INSERT INTO `actividadgrupal_new`.`tipo_variante` (`descripcion`)
+INSERT INTO `actividadgrupal_new`.`tipo_variante` (`nombre`)
 VALUES
-('exon'),
-('intron'),
-('ARNm'),
-('miARN'),
-('snARN'),
-('snoARN'),
-('tARN'),
-('rARN'),
-('promotor'),
-('terminador'),
-('enhancer'),
-('silencer');
+('SNP'),
+('Inserción'),
+('Deleción'),
+('Duplicación'),
+('Translocación'),
+('Inversión');
